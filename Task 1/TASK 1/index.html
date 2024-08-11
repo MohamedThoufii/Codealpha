@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Flashcard Quiz App</h1>
+        
+        <div id="flashcard-form">
+            <input type="text" id="question" placeholder="Enter question" required>
+            <input type="text" id="answer" placeholder="Enter answer" required>
+            <button onclick="addFlashcard()">Add Flashcard</button>
+        </div>
+
+        <div id="quiz-section">
+            <h2>Quiz Yourself</h2>
+            <div id="flashcard">
+                <p id="flashcard-question"></p>
+                <button id="show-answer-btn" onclick="showAnswer()">Show Answer</button>
+                <p id="flashcard-answer" style="display: none;"></p>
+                <button id="correct-btn" onclick="markCorrect()" style="display: none;">Correct</button>
+                <button id="incorrect-btn" onclick="markIncorrect()" style="display: none;">Incorrect</button>
+            </div>
+        </div>
+
+        <div id="score-section">
+            <h2>Score</h2>
+            <p id="score">Correct: 0 / 0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
